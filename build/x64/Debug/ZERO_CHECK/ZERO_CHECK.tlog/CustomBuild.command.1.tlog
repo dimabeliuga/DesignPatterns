@@ -1,0 +1,10 @@
+^D:\C++\PROJECTS\DESIGN PATTERNS\BUILD\CMAKEFILES\37734447FD4DCD85582929725644A958\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SD:/C++/Projects/Design Patterns" "-BD:/C++/Projects/Design Patterns/build" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "D:/C++/Projects/Design Patterns/build/DesignPatterns.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
