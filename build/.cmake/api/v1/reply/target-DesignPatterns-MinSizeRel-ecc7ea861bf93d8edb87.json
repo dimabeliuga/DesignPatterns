@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "Debug/DesignPatterns.exe"
+			"path" : "MinSizeRel/DesignPatterns.exe"
 		},
 		{
-			"path" : "Debug/DesignPatterns.pdb"
+			"path" : "MinSizeRel/DesignPatterns.pdb"
 		}
 	],
 	"backtrace" : 2,
@@ -30,7 +30,7 @@
 			{
 				"command" : 1,
 				"file" : 1,
-				"line" : 27,
+				"line" : 36,
 				"parent" : 0
 			},
 			{
@@ -42,7 +42,7 @@
 			{
 				"command" : 2,
 				"file" : 1,
-				"line" : 29,
+				"line" : 38,
 				"parent" : 0
 			}
 		]
@@ -53,14 +53,14 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd"
+					"fragment" : "/DWIN32 /D_WINDOWS /EHsc /O1 /Ob1 /DNDEBUG -std:c++17 -MD"
 				}
 			],
 			"includes" : 
 			[
 				{
 					"backtrace" : 3,
-					"path" : "D:/C++/Projects/Design Patterns/include/BuilderPattern"
+					"path" : "D:/C++/Projects/Design Patterns/include/FactoryMethod"
 				}
 			],
 			"language" : "CXX",
@@ -81,11 +81,11 @@
 	"dependencies" : 
 	[
 		{
-			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
+			"backtrace" : 3,
+			"id" : "FactoryMethod::@6890427a1f51a3e7e1df"
 		},
 		{
-			"backtrace" : 3,
-			"id" : "BuilderPattern::@6890427a1f51a3e7e1df"
+			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "DesignPatterns::@6890427a1f51a3e7e1df",
@@ -94,16 +94,16 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "/DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd",
+				"fragment" : "/DWIN32 /D_WINDOWS /EHsc /O1 /Ob1 /DNDEBUG -MD",
 				"role" : "flags"
 			},
 			{
-				"fragment" : "/machine:x64 /debug /INCREMENTAL /subsystem:console",
+				"fragment" : "/machine:x64 /INCREMENTAL:NO /subsystem:console",
 				"role" : "flags"
 			},
 			{
 				"backtrace" : 3,
-				"fragment" : "Debug\\BuilderPattern.lib",
+				"fragment" : "MinSizeRel\\FactoryMethod.lib",
 				"role" : "libraries"
 			},
 			{

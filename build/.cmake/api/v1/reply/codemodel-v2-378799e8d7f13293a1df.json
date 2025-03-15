@@ -45,22 +45,22 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ALL_BUILD-Debug-28895ee86f2d9a42e404.json",
+					"jsonFile" : "target-ALL_BUILD-Debug-10531e7a7bf2ce50bdb4.json",
 					"name" : "ALL_BUILD",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
-					"id" : "BuilderPattern::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-BuilderPattern-Debug-669017b34cd17bf80402.json",
-					"name" : "BuilderPattern",
+					"id" : "DesignPatterns::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-DesignPatterns-Debug-c56ab1839cb1d3e13a1e.json",
+					"name" : "DesignPatterns",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
-					"id" : "DesignPatterns::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-DesignPatterns-Debug-972177916df3c2bafc87.json",
-					"name" : "DesignPatterns",
+					"id" : "FactoryMethod::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-FactoryMethod-Debug-166ddbcee21d980fc2b7.json",
+					"name" : "FactoryMethod",
 					"projectIndex" : 0
 				},
 				{
@@ -116,22 +116,22 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ALL_BUILD-Release-28895ee86f2d9a42e404.json",
+					"jsonFile" : "target-ALL_BUILD-Release-10531e7a7bf2ce50bdb4.json",
 					"name" : "ALL_BUILD",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
-					"id" : "BuilderPattern::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-BuilderPattern-Release-ba361f7e626e581f4a0d.json",
-					"name" : "BuilderPattern",
+					"id" : "DesignPatterns::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-DesignPatterns-Release-bd798a28887abfb2fa46.json",
+					"name" : "DesignPatterns",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
-					"id" : "DesignPatterns::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-DesignPatterns-Release-36a93a890c27286e5beb.json",
-					"name" : "DesignPatterns",
+					"id" : "FactoryMethod::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-FactoryMethod-Release-4aeabcab6f4147f77f4e.json",
+					"name" : "FactoryMethod",
 					"projectIndex" : 0
 				},
 				{
@@ -187,22 +187,22 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ALL_BUILD-MinSizeRel-28895ee86f2d9a42e404.json",
+					"jsonFile" : "target-ALL_BUILD-MinSizeRel-10531e7a7bf2ce50bdb4.json",
 					"name" : "ALL_BUILD",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
-					"id" : "BuilderPattern::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-BuilderPattern-MinSizeRel-bfda52991d06a1c21f92.json",
-					"name" : "BuilderPattern",
+					"id" : "DesignPatterns::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-DesignPatterns-MinSizeRel-ecc7ea861bf93d8edb87.json",
+					"name" : "DesignPatterns",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
-					"id" : "DesignPatterns::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-DesignPatterns-MinSizeRel-372f0736642f8bb8b6e9.json",
-					"name" : "DesignPatterns",
+					"id" : "FactoryMethod::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-FactoryMethod-MinSizeRel-f08f1117bbd067479792.json",
+					"name" : "FactoryMethod",
 					"projectIndex" : 0
 				},
 				{
@@ -258,22 +258,22 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ALL_BUILD-RelWithDebInfo-28895ee86f2d9a42e404.json",
+					"jsonFile" : "target-ALL_BUILD-RelWithDebInfo-10531e7a7bf2ce50bdb4.json",
 					"name" : "ALL_BUILD",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
-					"id" : "BuilderPattern::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-BuilderPattern-RelWithDebInfo-4047c54d0d179f804458.json",
-					"name" : "BuilderPattern",
+					"id" : "DesignPatterns::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-DesignPatterns-RelWithDebInfo-1a6cd910e5a7862ea284.json",
+					"name" : "DesignPatterns",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
-					"id" : "DesignPatterns::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-DesignPatterns-RelWithDebInfo-8b7483add0f61c51ffbb.json",
-					"name" : "DesignPatterns",
+					"id" : "FactoryMethod::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-FactoryMethod-RelWithDebInfo-5e27789f9c1ca5dd344d.json",
+					"name" : "FactoryMethod",
 					"projectIndex" : 0
 				},
 				{

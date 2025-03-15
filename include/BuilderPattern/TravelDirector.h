@@ -15,5 +15,15 @@ class TravelDirector{
         void typeTravelInformation() const;
         Travel getConstuctedTravel() const;
 };
+/*
+//* expamle of using this programme
+auto beachBuilder = std::make_unique<AdventureTourBuilder>();
+    TravelDirector director(std::move(beachBuilder));
+    
+    director.constructTravel();
+    Travel travel = director.getConstuctedTravel();
+    travel.type();
+    director.typeTravelInformation();
+*/
 
 #endif //TRAVEL_DIRECTOR_H
