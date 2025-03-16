@@ -20,6 +20,5 @@ int main() {
     {
         std::cerr << ex.what() << '\n';
     }
-    
     return 0;
 }
