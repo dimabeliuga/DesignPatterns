@@ -1,5 +1,6 @@
 
 #include "WorldFactory.h"
+#include "Desctiption.h"
 #include <random>
 
 //* FantasyWorldFactory
@@ -73,7 +74,7 @@ void WorldCreator::createRandomWorld() {
     worldFactory -> createWeapon();
 }
 
-void WorldCreator::outputWorldInformation() {
+void WorldCreator::outputWorldInformation() const{
     worldFactory -> character -> describe();
     worldFactory -> landscape -> describe();
     worldFactory -> transport -> describe();

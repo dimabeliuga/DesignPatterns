@@ -1,4 +1,6 @@
 #include "CargoTransportation.h"
+#include "TransportCreator.h"
+#include <iostream>
 
 //* CargoCreator class
 CargoCreator::CargoCreator(const double& _distanceTravel, const double& _cargoWeight) {
@@ -20,7 +22,7 @@ void CargoCreator::createTransports() {
 }
 
 void CargoCreator::doAction(uint32_t transportCode, TRANSPORT_ACTIONS action) const {
-    if(transportCode < 0 || transportCode >= NUMBER_OF_TRANSPORTS) {
+    if(transportCode >= NUMBER_OF_TRANSPORTS) {
         std::cout << "Warn: unknown transport code" << std::endl;
         return ;
     }

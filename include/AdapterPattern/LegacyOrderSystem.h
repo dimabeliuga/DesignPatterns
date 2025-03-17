@@ -9,7 +9,7 @@ protected:
     std::string orderDetails;
 public:
     LegacyOrderSystem() = default;
-    LegacyOrderSystem(const std::string_view temp_orderDetails)
+    explicit LegacyOrderSystem(const std::string_view temp_orderDetails)
         : orderDetails(temp_orderDetails) {}
     
     LegacyOrderSystem(LegacyOrderSystem&&) noexcept = default;

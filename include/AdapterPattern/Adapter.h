@@ -18,8 +18,8 @@ private:
     std::string parseCurrency(const std::string& details) const;
 
 public:
-    Adapter(const LegacyOrderSystem& legacy) : legacySystem(legacy) {}
-    Adapter(LegacyOrderSystem&& legacy) : legacySystem(std::move(legacy)) {}
+    explicit Adapter(const LegacyOrderSystem& legacy) : legacySystem(legacy) {}
+    explicit Adapter(LegacyOrderSystem&& legacy) : legacySystem(std::move(legacy)) {}
 
     int getOrderId() const override;
     std::string getCustomerName() const override;

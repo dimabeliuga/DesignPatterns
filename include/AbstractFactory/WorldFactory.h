@@ -2,7 +2,6 @@
 #define WORLD_FACTORY_H
 
 #include <memory>
-#include "Desctiption.h"
 #include "Character.h"
 #include "Landscape.h"
 #include "Transport.h"
@@ -69,7 +68,7 @@ class WorldCreator {
     public:
         WorldCreator() : worldFactory(nullptr) {}
         void createRandomWorld();
-        void outputWorldInformation();
+        void outputWorldInformation() const;
     private:
         static unsigned short getNumberOfFactories();
 };

@@ -7,6 +7,7 @@ int Adapter::parseOrderId(const std::string& details) const {
     pos += 9; //* Order id length
     size_t end = details.find(';', pos);
     return std::stoi(details.substr(pos, end - pos));
+    
 }
 
 std::string Adapter::parseCustomerName(const std::string& details) const {
@@ -15,6 +16,7 @@ std::string Adapter::parseCustomerName(const std::string& details) const {
     pos += 10; //* Customer required length
     size_t end = details.find(';', pos);
     return details.substr(pos, end - pos);
+    
 }
 
 double Adapter::parseAmount(const std::string& details) const {

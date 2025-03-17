@@ -8,7 +8,7 @@ class TravelDirector{
     private: 
         std::unique_ptr<TravelBuilder> builder;
     public:
-        TravelDirector(std::unique_ptr<TravelBuilder>&& builderSpecific) 
+        explicit TravelDirector(std::unique_ptr<TravelBuilder>&& builderSpecific) 
                         : builder{std::move(builderSpecific)} {}
         
         void constructTravel();
