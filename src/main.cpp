@@ -1,28 +1,19 @@
-#include "CargoTransportation.h"
+#include "CharacterPrototype.h"
+#include "Warrior.h"
+#include "Archer.h"
+#include "Mage.h"
+
 #include <iostream>
 
 int main() {
-    try
-    {    
-        CargoCreator create(1200, 352);
-        
-        for(int i = 0; i < 4; ++i) {
-            std::cout << std::endl;
-            create.calculateCargoPrice(i);
-        }
-        
-        
-        
-        std::cout << "\n\n";
-        for(int i = 0; i < 4; ++i) {
-            std::cout << std::endl;
-            create.outputTransportInformation(i);
-        }   
-    }
-    catch(const std::invalid_argument& ex)
-    {
-        std::cerr << ex.what() << '\n';
-        
-    }
+    std::unique_ptr<CharacterPrototype> character = std::make_unique<Mage>();
+    character -> displayCharcterInformation();
+
+    auto clone = character -> clone();
+    clone -> displayCharcterInformation();
+
+    character -> upgradeLevel();
+    character -> displayCharcterInformation();
+    clone -> displayCharcterInformation();
     return 0;
 }
