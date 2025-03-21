@@ -2,17 +2,15 @@
 #define WARRIOR_H
 
 #include "CharacterPrototype.h"
-#include <memory>
 
 class Warrior : public CharacterPrototype {
-    public:  // Make constructor public
+    public: 
         Warrior();
         // Private constructor for cloning
-        explicit Warrior(const Warrior& other);
+        explicit Warrior(std::unique_ptr<Characteristics> chars);
         
-        std::unique_ptr<CharacterPrototype> clone() const override ;
-
         void upgradeLevel() override;
+        std::unique_ptr<CharacterPrototype> clone() const override ;
 };
 
 #endif //WARRIOR_H

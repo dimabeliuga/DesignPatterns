@@ -8,24 +8,34 @@ Warrior::Warrior() : CharacterPrototype(
         rangeDouble {20, 40},   // intelligence
         CHARACTER_TYPE::WARRIOR //type
         // level = 1 (by default but you can input any level you want) 
-    )) {}
+    )) 
+{
+}
+
+Warrior::Warrior(std::unique_ptr<Characteristics> chars) 
+            : CharacterPrototype(std::move(chars)) 
+{
+}
+    
 
 std::unique_ptr<CharacterPrototype> Warrior::clone() const
 {
-    return std::make_unique<Warrior>(*this);
+    auto clonedCharacteristics = std::make_unique<Characteristics>(
+        characteristics->health,
+        characteristics->agility,
+        characteristics->strength,
+        characteristics->intelligence,
+        characteristics->type,
+        characteristics->level
+    );
+    auto cloneWarrior = std::make_unique<Warrior>(std::move(clonedCharacteristics));
+    for (const auto& skill : skills) {
+        cloneWarrior->addSkill(skill->clone());
+    }
+    return cloneWarrior;
 }
 
 void Warrior::upgradeLevel() 
 {
     upgradeLevelHelper(30, 12, 22, 8);
 }
-
-Warrior::Warrior(const Warrior& other) : CharacterPrototype(
-    std::make_unique<Characteristics>(
-        other.characteristics->health,
-        other.characteristics->agility,
-        other.characteristics->strength,
-        other.characteristics->intelligence,
-        other.characteristics->type,
-        other.characteristics->level
-    )) {}

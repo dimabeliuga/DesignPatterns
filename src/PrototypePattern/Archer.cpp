@@ -9,20 +9,26 @@ Archer::Archer() : CharacterPrototype(
         CHARACTER_TYPE::ARCHER
 )) {}
 
-Archer::Archer(const Archer& other) : CharacterPrototype(
-    std::make_unique<Characteristics> (
-        other.characteristics->health,
-        other.characteristics->agility,
-        other.characteristics->strength,
-        other.characteristics->intelligence,
-        other.characteristics->type,
-        other.characteristics->level
-    )
-) {}
+Archer::Archer(std::unique_ptr<Characteristics> chars) 
+                : CharacterPrototype(std::move(chars))
+{
+}
 
 std::unique_ptr<CharacterPrototype> Archer::clone() const 
 {
-    return std::make_unique<Archer>(*this);
+    auto clonedCharacteristics = std::make_unique<Characteristics>(
+        characteristics->health,
+        characteristics->agility,
+        characteristics->strength,
+        characteristics->intelligence,
+        characteristics->type,
+        characteristics->level
+    );
+    auto cloneArcher = std::make_unique<Archer>(std::move(clonedCharacteristics));
+    for (const auto& skill : skills) {
+        cloneArcher->addSkill(skill->clone());
+    }
+    return cloneArcher;
 }
 
 void Archer::upgradeLevel(){

@@ -39,7 +39,54 @@ void CharacterPrototype::displayCharcterInformation() const {
               << "Agility: " << characteristics -> agility << '\n'
               << "Strength: " << characteristics -> strength << '\n'
               << "Intelligence: " << characteristics -> intelligence << '\n'
+              << "Apllied skills: " << skills.size() << '\n'
+              << "Bonus Health: " << characteristics -> bonusHealth << '\n'
+              << "Bonus Agility: " << characteristics -> bonusAgility << '\n'
+              << "Bonus Strength: " << characteristics -> bonusStrength << '\n'
+              << "Bonus Intelligence: " << characteristics -> bonusIntelligence << '\n'
               << "-------------------------------" << '\n';
+}
+
+void CharacterPrototype::addSkill(std::unique_ptr<Skill> skill) {
+    if(!skill){
+        std::cout << "You didn't specify any skill\n";
+        return ;
+    } 
+    auto& bonus = skill -> bonus;
+    if(!bonus.isAppliedToHero){
+        characteristics -> bonusHealth += bonus.health;
+        characteristics -> bonusAgility += bonus.agility;
+        characteristics -> bonusStrength += bonus.strength;
+        characteristics -> bonusIntelligence += bonus.intelligence;
+        bonus.isAppliedToHero = true;
+
+        skills.emplace_back(std::move(skill));
+    }
+}
+
+void CharacterPrototype::removeSkill(size_t index){
+    if(index >= skills.size()) {
+        std::cout << "Error: incorect skill index of skill you want to remove!!!\n";
+        return ;
+    }
+
+    const auto& bonus = skills[index] -> bonus;
+
+    characteristics -> bonusHealth -= bonus.health;
+    characteristics -> bonusAgility -= bonus.agility;
+    characteristics -> bonusStrength -= bonus.strength;
+    characteristics -> bonusIntelligence -= bonus.intelligence;
+    //bonus.isAppliedToHero = false;
+
+
+    skills.erase(skills.begin() + index);
+}
+
+void CharacterPrototype::showAppliedSkills() const{
+    for(size_t i = 0; i < skills.size(); ++i) {
+        std::cout << '\n' << "Skill index = " << i << '\n';
+        skills[i]-> displaySkillInformation();
+    }
 }
 
 void CharacterPrototype::upgradeLevelHelper(double _health, double _agility, double _strength, double _intelligence)

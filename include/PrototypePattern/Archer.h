@@ -2,14 +2,12 @@
 #define ARCHER_H
 
 #include "CharacterPrototype.h"
-#include <memory>
 
 class Archer : public CharacterPrototype {
     public:
         Archer();
-        explicit Archer(const Archer& other);
-
-        std::unique_ptr<CharacterPrototype> clone() const override;
+        explicit Archer(std::unique_ptr<Characteristics> chars);
         void upgradeLevel() override;
+        std::unique_ptr<CharacterPrototype> clone() const override;
 };
 #endif

@@ -51,6 +51,7 @@ add_library(PrototypePattern STATIC
                 src/PrototypePattern/Warrior.cpp
                 src/PrototypePattern/Archer.cpp
                 src/PrototypePattern/Mage.cpp
+                src/PrototypePattern/Skill.cpp
                 )
 
 target_include_directories(PrototypePattern 

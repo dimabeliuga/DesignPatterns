@@ -2,27 +2,36 @@
 
 Mage::Mage() : CharacterPrototype(
     std::make_unique<Characteristics>(
-        rangeDouble {70, 100},
-        rangeDouble {60, 80},
-        rangeDouble {70, 90},
-        rangeDouble {100, 130},
+        rangeDouble{70, 100},
+        rangeDouble{60, 80},
+        rangeDouble{70, 90},
+        rangeDouble{100, 130},
         CHARACTER_TYPE::MAGE
-    )) {}
-
-Mage::Mage(const Mage &other) : CharacterPrototype(
-    std::make_unique<Characteristics>(
-        other.characteristics->health,
-        other.characteristics->agility,
-        other.characteristics->strength,
-        other.characteristics->intelligence,
-        other.characteristics->type,
-        other.characteristics->level
-    )) {}
-
-std::unique_ptr<CharacterPrototype> Mage::clone() const{
-    return std::make_unique<Mage>(*this);
+    ))
+{
 }
 
-void Mage::upgradeLevel(){
-    upgradeLevelHelper(25, 15, 18, 23);
+Mage::Mage(std::unique_ptr<Characteristics> chars) 
+    : CharacterPrototype(std::move(chars))
+{
+}
+
+std::unique_ptr<CharacterPrototype> Mage::clone() const {
+    auto clonedCharacteristics = std::make_unique<Characteristics>(
+        characteristics->health,
+        characteristics->agility,
+        characteristics->strength,
+        characteristics->intelligence,
+        characteristics->type,
+        characteristics->level
+    );
+    auto cloneMage = std::make_unique<Mage>(std::move(clonedCharacteristics));
+    for (const auto& skill : skills) {
+        cloneMage->addSkill(skill->clone());
+    }
+    return cloneMage;
+}
+
+void Mage::upgradeLevel() {
+    upgradeLevelHelper(5.0, 8.0, 5.0, 15.0); 
 }

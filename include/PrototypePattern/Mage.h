@@ -1,15 +1,14 @@
-#ifndef MAG_H
-#define MAG_H
+#ifndef MAGE_H
+#define MAGE_H
 
 #include "CharacterPrototype.h"
-#include <memory>
 
 class Mage : public CharacterPrototype {
     public:
         Mage();
-        explicit Mage(const Mage& other);
-
-        std::unique_ptr<CharacterPrototype> clone() const override;
+        explicit Mage(std::unique_ptr<Characteristics> chars);
         void upgradeLevel() override;
+        std::unique_ptr<CharacterPrototype> clone() const override;
 };
-#endif //MAG_H
+
+#endif // MAGE_H
