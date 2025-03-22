@@ -46,19 +46,35 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 #                            ${CMAKE_CURRENT_SOURCE_DIR}/include/FactoryMethod)
 
 #Prototype Pattern
-add_library(PrototypePattern STATIC 
-                src/PrototypePattern/CharcterPrototype.cpp
-                src/PrototypePattern/Warrior.cpp
-                src/PrototypePattern/Archer.cpp
-                src/PrototypePattern/Mage.cpp
-                src/PrototypePattern/Skill.cpp
+#add_library(PrototypePattern STATIC 
+#                src/PrototypePattern/CharcterPrototype.cpp
+#                src/PrototypePattern/Warrior.cpp
+#                src/PrototypePattern/Archer.cpp
+#                src/PrototypePattern/Mage.cpp
+#                src/PrototypePattern/Skill.cpp
+#                )
+
+#target_include_directories(PrototypePattern 
+#                            PUBLIC
+#                            ${CMAKE_CURRENT_SOURCE_DIR}/include/PrototypePattern
+#                            )
+
+# Singleton Pattern
+find_package(nlohmann_json CONFIG REQUIRED)
+
+add_library(SingletonPattern STATIC 
+                src/SingletonPattern/ConfigurationManager.cpp
+                src/SingletonPattern/JsonParser.cpp
                 )
 
-target_include_directories(PrototypePattern 
+target_include_directories(SingletonPattern 
                             PUBLIC
-                            ${CMAKE_CURRENT_SOURCE_DIR}/include/PrototypePattern
+                            ${CMAKE_CURRENT_SOURCE_DIR}/include/SingletonPattern
                             )
+
+target_link_libraries(SingletonPattern PUBLIC nlohmann_json::nlohmann_json)
+
 add_executable(${CMAKE_PROJECT_NAME} src/main.cpp)
 
-target_link_libraries(${CMAKE_PROJECT_NAME} PUBLIC PrototypePattern)  # AdapterPattern/AbstractFactory/BuilderPattern/FactoryMethod
+target_link_libraries(${CMAKE_PROJECT_NAME} PUBLIC SingletonPattern)  # AdapterPattern/AbstractFactory/BuilderPattern/FactoryMethod/PrototypePattern
 
