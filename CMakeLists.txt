@@ -60,21 +60,30 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 #                            )
 
 # Singleton Pattern
-find_package(nlohmann_json CONFIG REQUIRED)
+#find_package(nlohmann_json CONFIG REQUIRED)
 
-add_library(SingletonPattern STATIC 
-                src/SingletonPattern/ConfigurationManager.cpp
-                src/SingletonPattern/JsonParser.cpp
+#add_library(SingletonPattern STATIC 
+#                src/SingletonPattern/ConfigurationManager.cpp
+#                src/SingletonPattern/JsonParser.cpp
+#                )
+
+#target_include_directories(SingletonPattern 
+#                            PUBLIC
+#                            ${CMAKE_CURRENT_SOURCE_DIR}/include/SingletonPattern
+#                            )
+#
+#target_link_libraries(SingletonPattern PUBLIC nlohmann_json::nlohmann_json)
+
+add_library(BridgePattern STATIC
+                src/BridgePattern/Engine.cpp
+                src/BridgePattern/Vehicle.cpp
                 )
-
-target_include_directories(SingletonPattern 
+target_include_directories(BridgePattern
                             PUBLIC
-                            ${CMAKE_CURRENT_SOURCE_DIR}/include/SingletonPattern
-                            )
-
-target_link_libraries(SingletonPattern PUBLIC nlohmann_json::nlohmann_json)
+                            ${CMAKE_CURRENT_SOURCE_DIR}/include/BridgePattern
+)
 
 add_executable(${CMAKE_PROJECT_NAME} src/main.cpp)
 
-target_link_libraries(${CMAKE_PROJECT_NAME} PUBLIC SingletonPattern)  # AdapterPattern/AbstractFactory/BuilderPattern/FactoryMethod/PrototypePattern
+target_link_libraries(${CMAKE_PROJECT_NAME} PUBLIC BridgePattern)  # AdapterPattern/AbstractFactory/BuilderPattern/FactoryMethod/PrototypePattern/SingletonPattern
 
