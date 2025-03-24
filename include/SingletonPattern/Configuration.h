@@ -14,7 +14,7 @@ class FileParser {
         virtual bool loadFromFile(std::string_view filePath) = 0;
         virtual bool saveToFile(std::string_view fileOutPath, size_t dump) = 0;
         virtual void showSettings() const = 0;
-        virtual void setSetting(std::string_view key, std::string_view value) = 0;
+        virtual void setSetting(std::string_view key, nlohmann::json value) = 0;
 };
 
 #endif //CONFIGURATION_H

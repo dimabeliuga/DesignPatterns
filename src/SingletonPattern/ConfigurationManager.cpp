@@ -1,4 +1,5 @@
 #include "ConfigurationManager.h"
+#include <iostream>
 
 bool ConfigurationManager::isPointerInitialized() const
 {
@@ -12,7 +13,11 @@ ConfigurationManager &ConfigurationManager::getInstance()
 }
 
 void ConfigurationManager::setParser(std::unique_ptr<FileParser> parser){
-    fileParser = std::move(parser);
+    if(!isPointerInitialized()){
+        fileParser = std::move(parser);
+    } else {
+        std::cout << "Warning: you have already set the parser\n";
+    }
 }
 
 bool ConfigurationManager::loadFromFile(std::string_view filePath)
@@ -37,6 +42,12 @@ nlohmann::json ConfigurationManager::getSetting(std::string_view key) const
         return fileParser -> getSetting(key);
     }
     return false;
+}
+
+void ConfigurationManager::setSetting(std::string_view key, nlohmann::json value) {
+    if(isPointerInitialized()){
+        fileParser -> setSetting(key, value);
+    }
 }
 
 void ConfigurationManager::showSettings() const

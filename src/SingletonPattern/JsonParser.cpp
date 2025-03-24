@@ -36,10 +36,6 @@ bool JsonParser::saveToFile(std::string_view fileOutPath, size_t dump)
     return true;
 }
 
-JsonParser::JsonParser(std::string_view filePath){
-    loadFromFile(filePath);
-}
-
 nlohmann::json JsonParser::getSetting(std::string_view key) const
 {
     std::istringstream iss(key.data());
@@ -56,7 +52,36 @@ nlohmann::json JsonParser::getSetting(std::string_view key) const
     return *current;
 }
 
+
+void JsonParser::setSetting(std::string_view key, nlohmann::json value)
+{
+    std::istringstream iss(key.data());
+    std::string token;
+
+    nlohmann::json *current = &config;
+
+    while(std::getline(iss, token, '.')){
+        current = &(*current)[token];
+    }
+    *current = value;
+}
+
 void JsonParser::showSettings() const
 {
     std::cout << config.dump(4);
 }
+
+
+/* example of usage
+    auto& jsonParser = ConfigurationManager::getInstance();
+    jsonParser.setParser(std::make_unique<JsonParser>());
+    jsonParser.setParser(std::make_unique<JsonParser>()); // won't work
+
+    jsonParser.setSetting("settings.resolution.height", 720);
+    jsonParser.setSetting("settings.fullscreen", false);
+    jsonParser.setSetting("user.name", "Alice");
+    jsonParser.setSetting("features", nlohmann::json::array({"autosave", "sync"}));
+    jsonParser.setSetting("settings.new_block", nlohmann::json{{"key1", 123}, {"key2", "abc"}});
+
+    jsonParser.saveToFile("config_edited.json");
+*/

@@ -26,12 +26,7 @@ class ConfigurationManager : public FileParser{
         bool saveToFile(std::string_view fileOutPath, size_t dump = 4) override;
         void showSettings() const override;
         bool loadFromFile(std::string_view filePath) override;
-
-        template<typename T>
-        void setSetting(std::string_view key, T value) {
-            if(isPointerInitialized()){
-                fileParser -> setSetting(key, value);
-            }
-        }
+        void setSetting(std::string_view key, nlohmann::json value) override;
+            
 };
 #endif //CONFIGURATION_MANAGER_H
