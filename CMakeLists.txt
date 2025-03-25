@@ -74,16 +74,25 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 #
 #target_link_libraries(SingletonPattern PUBLIC nlohmann_json::nlohmann_json)
 
-add_library(BridgePattern STATIC
-                src/BridgePattern/Engine.cpp
-                src/BridgePattern/Vehicle.cpp
-                )
-target_include_directories(BridgePattern
-                            PUBLIC
-                            ${CMAKE_CURRENT_SOURCE_DIR}/include/BridgePattern
-)
+#add_library(BridgePattern STATIC
+#                src/BridgePattern/Engine.cpp
+#                src/BridgePattern/Vehicle.cpp
+#                )
+#target_include_directories(BridgePattern
+#                            PUBLIC
+#                            ${CMAKE_CURRENT_SOURCE_DIR}/include/BridgePattern
+#)
 
+add_library(CompositePattern STATIC
+                src/CompositePattern/Building.cpp
+                src/CompositePattern/CompositeArea.cpp
+                )
+
+target_include_directories(CompositePattern
+                            PUBLIC
+                            ${CMAKE_CURRENT_SOURCE_DIR}/include/CompositePattern
+                            )
 add_executable(${CMAKE_PROJECT_NAME} src/main.cpp)
 
-target_link_libraries(${CMAKE_PROJECT_NAME} PUBLIC BridgePattern)  # AdapterPattern/AbstractFactory/BuilderPattern/FactoryMethod/PrototypePattern/SingletonPattern
+target_link_libraries(${CMAKE_PROJECT_NAME} PUBLIC CompositePattern)  # AdapterPattern/AbstractFactory/BuilderPattern/FactoryMethod/PrototypePattern/SingletonPattern/BridgePattern
 
