@@ -83,16 +83,48 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 #                            ${CMAKE_CURRENT_SOURCE_DIR}/include/BridgePattern
 #)
 
-add_library(CompositePattern STATIC
-                src/CompositePattern/Building.cpp
-                src/CompositePattern/CompositeArea.cpp
+#add_library(CompositePattern STATIC
+#                src/CompositePattern/Building.cpp
+#                src/CompositePattern/CompositeArea.cpp
+#                )
+
+#target_include_directories(CompositePattern
+#                            PUBLIC
+#                            ${CMAKE_CURRENT_SOURCE_DIR}/include/CompositePattern
+#                            )
+
+#add_library(DecoratorPattern STATIC
+#                src/DecoratorPattern/Pizza.cpp
+#                src/DecoratorPattern/PizzaDecorator.cpp
+#                )
+
+#target_include_directories(DecoratorPattern
+#                            PUBLIC
+#                            ${CMAKE_CURRENT_SOURCE_DIR}/include/DecoratorPattern
+#                            )
+
+set(FactorySourceFiles 
+        src/FacadePattern/FactorySystem/ConveyorLine.cpp
+        src/FacadePattern/FactorySystem/Lighting.cpp
+        src/FacadePattern/FactorySystem/QualityControlSystem.cpp
+        src/FacadePattern/FactorySystem/RoboticManipulator.cpp
+        src/FacadePattern/FactorySystem/Ventilation.cpp
+        src/FacadePattern/FactorySystem/Warehouse.cpp
+        
+        )
+
+add_library(FacadePattern STATIC 
+                ${FactorySourceFiles}
+                src/FacadePattern/Facade.cpp
                 )
 
-target_include_directories(CompositePattern
+target_include_directories(FacadePattern 
                             PUBLIC
-                            ${CMAKE_CURRENT_SOURCE_DIR}/include/CompositePattern
+                            ${CMAKE_CURRENT_SOURCE_DIR}/include/FacadePattern
+                            ${CMAKE_CURRENT_SOURCE_DIR}/include/FacadePattern/FactorySystem
                             )
+
 add_executable(${CMAKE_PROJECT_NAME} src/main.cpp)
 
-target_link_libraries(${CMAKE_PROJECT_NAME} PUBLIC CompositePattern)  # AdapterPattern/AbstractFactory/BuilderPattern/FactoryMethod/PrototypePattern/SingletonPattern/BridgePattern
+target_link_libraries(${CMAKE_PROJECT_NAME} PUBLIC FacadePattern)  # AdapterPattern/AbstractFactory/BuilderPattern/FactoryMethod/PrototypePattern/SingletonPattern/BridgePattern/CompositePattern/DecoratorPattern
 
