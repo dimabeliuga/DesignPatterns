@@ -103,28 +103,39 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 #                            ${CMAKE_CURRENT_SOURCE_DIR}/include/DecoratorPattern
 #                            )
 
-set(FactorySourceFiles 
-        src/FacadePattern/FactorySystem/ConveyorLine.cpp
-        src/FacadePattern/FactorySystem/Lighting.cpp
-        src/FacadePattern/FactorySystem/QualityControlSystem.cpp
-        src/FacadePattern/FactorySystem/RoboticManipulator.cpp
-        src/FacadePattern/FactorySystem/Ventilation.cpp
-        src/FacadePattern/FactorySystem/Warehouse.cpp
-        
-        )
+#set(FactorySourceFiles 
+#        src/FacadePattern/FactorySystem/ConveyorLine.cpp
+#        src/FacadePattern/FactorySystem/Lighting.cpp
+#        src/FacadePattern/FactorySystem/QualityControlSystem.cpp
+#        src/FacadePattern/FactorySystem/RoboticManipulator.cpp
+#        src/FacadePattern/FactorySystem/Ventilation.cpp
+#        src/FacadePattern/FactorySystem/Warehouse.cpp        
+#        )
 
-add_library(FacadePattern STATIC 
-                ${FactorySourceFiles}
-                src/FacadePattern/Facade.cpp
+#add_library(FacadePattern STATIC 
+#                ${FactorySourceFiles}
+#                src/FacadePattern/Facade.cpp
+#                )
+
+#target_include_directories(FacadePattern 
+#                            PUBLIC
+#                            ${CMAKE_CURRENT_SOURCE_DIR}/include/FacadePattern
+#                            ${CMAKE_CURRENT_SOURCE_DIR}/include/FacadePattern/FactorySystem
+#                            )
+
+add_library(FlyWeightPattern STATIC
+                src/FlyWeightPattern/Animation.cpp
+                src/FlyWeightPattern/Sprite.cpp
+                src/FlyWeightPattern/Texture.cpp
+                src/FlyWeightPattern/TextureFactory.cpp
                 )
 
-target_include_directories(FacadePattern 
+target_include_directories(FlyWeightPattern
                             PUBLIC
-                            ${CMAKE_CURRENT_SOURCE_DIR}/include/FacadePattern
-                            ${CMAKE_CURRENT_SOURCE_DIR}/include/FacadePattern/FactorySystem
+                            ${CMAKE_CURRENT_SOURCE_DIR}/include/FlyWeightPattern
                             )
 
 add_executable(${CMAKE_PROJECT_NAME} src/main.cpp)
 
-target_link_libraries(${CMAKE_PROJECT_NAME} PUBLIC FacadePattern)  # AdapterPattern/AbstractFactory/BuilderPattern/FactoryMethod/PrototypePattern/SingletonPattern/BridgePattern/CompositePattern/DecoratorPattern
+target_link_libraries(${CMAKE_PROJECT_NAME} PUBLIC FlyWeightPattern)  # AdapterPattern/AbstractFactory/BuilderPattern/FactoryMethod/PrototypePattern/SingletonPattern/BridgePattern/CompositePattern/DecoratorPattern/FacadePattern
 
