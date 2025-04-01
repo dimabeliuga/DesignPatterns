@@ -123,19 +123,34 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 #                            ${CMAKE_CURRENT_SOURCE_DIR}/include/FacadePattern/FactorySystem
 #                            )
 
-add_library(FlyWeightPattern STATIC
-                src/FlyWeightPattern/Animation.cpp
-                src/FlyWeightPattern/Sprite.cpp
-                src/FlyWeightPattern/Texture.cpp
-                src/FlyWeightPattern/TextureFactory.cpp
+#add_library(FlyWeightPattern STATIC
+#                src/FlyWeightPattern/Animation.cpp
+#                src/FlyWeightPattern/Sprite.cpp
+#                src/FlyWeightPattern/Texture.cpp
+#                src/FlyWeightPattern/TextureFactory.cpp
+#                )
+
+#target_include_directories(FlyWeightPattern
+#                            PUBLIC
+#                            ${CMAKE_CURRENT_SOURCE_DIR}/include/FlyWeightPattern
+#                            )
+
+find_package(spdlog CONFIG REQUIRED)
+
+add_library(ProxyPattern STATIC
+                src/ProxyPattern/RealVideoService.cpp
+                src/ProxyPattern/ProxyVideoService.cpp
+                src/ProxyPattern/User.cpp
                 )
 
-target_include_directories(FlyWeightPattern
+target_include_directories(ProxyPattern
                             PUBLIC
-                            ${CMAKE_CURRENT_SOURCE_DIR}/include/FlyWeightPattern
+                            ${CMAKE_CURRENT_SOURCE_DIR}/include/ProxyPattern
                             )
 
 add_executable(${CMAKE_PROJECT_NAME} src/main.cpp)
 
-target_link_libraries(${CMAKE_PROJECT_NAME} PUBLIC FlyWeightPattern)  # AdapterPattern/AbstractFactory/BuilderPattern/FactoryMethod/PrototypePattern/SingletonPattern/BridgePattern/CompositePattern/DecoratorPattern/FacadePattern
+target_link_libraries(ProxyPattern PUBLIC spdlog::spdlog)
+
+target_link_libraries(${CMAKE_PROJECT_NAME} PUBLIC ProxyPattern)  # AdapterPattern/AbstractFactory/BuilderPattern/FactoryMethod/PrototypePattern/SingletonPattern/BridgePattern/CompositePattern/DecoratorPattern/FacadePattern/FlyWeightPattern
 

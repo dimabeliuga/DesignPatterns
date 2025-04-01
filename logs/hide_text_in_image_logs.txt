@@ -1,0 +1,88 @@
+[20:36:39 : 10744] [info] Proxy Video Servic has been created
+[20:36:39 : 10744] [info] Old element was deleted to place new one
+[20:36:39 : 10744] [info] Old element was deleted to place new one
+[20:36:39 : 10744] [info] Old element was deleted to place new one
+[20:36:39 : 10744] [info] Old element was deleted to place new one
+[22:13:53 : 21900] [info] Proxy Video Servic has been created
+[22:13:53 : 21900] [warning] You level of the subsctiption doesn't allow you to use this feature
+[22:13:53 : 21900] [warning] You level of the subsctiption doesn't allow you to use this feature
+[22:13:53 : 21900] [warning] You level of the subsctiption doesn't allow you to use this feature
+[22:13:53 : 21900] [warning] You level of the subsctiption doesn't allow you to use this feature
+[22:13:53 : 21900] [warning] You level of the subsctiption doesn't allow you to use this feature
+[22:13:53 : 21900] [warning] You level of the subsctiption doesn't allow you to use this feature
+[22:13:53 : 21900] [warning] You level of the subsctiption doesn't allow you to use this feature
+[22:13:53 : 21900] [warning] You level of the subsctiption doesn't allow you to use this feature
+[22:13:53 : 21900] [warning] You level of the subsctiption doesn't allow you to use this feature
+[22:16:33 : 26608] [info] Proxy Video Servic has been created
+[22:16:33 : 26608] [warning] You level of the subsctiption doesn't allow you to use this feature
+[22:16:33 : 26608] [warning] You level of the subsctiption doesn't allow you to use this feature
+[22:16:33 : 26608] [warning] You level of the subsctiption doesn't allow you to use this feature
+[22:16:33 : 26608] [warning] You level of the subsctiption doesn't allow you to use this feature
+[22:16:33 : 26608] [warning] You level of the subsctiption doesn't allow you to use this feature
+[22:16:33 : 26608] [warning] You level of the subsctiption doesn't allow you to use this feature
+[22:16:33 : 26608] [warning] You level of the subsctiption doesn't allow you to use this feature
+[22:16:33 : 26608] [warning] You level of the subsctiption doesn't allow you to use this feature
+[22:16:33 : 26608] [warning] You level of the subsctiption doesn't allow you to use this feature
+[22:21:30 : 25352] [info] Proxy Video Servic has been created
+[22:21:30 : 25352] [warning] You level of the subsctiption doesn't allow you to use this feature
+[22:21:30 : 25352] [warning] You level of the subsctiption doesn't allow you to use this feature
+[22:21:30 : 25352] [warning] You level of the subsctiption doesn't allow you to use this feature
+[22:21:30 : 25352] [warning] You level of the subsctiption doesn't allow you to use this feature
+[22:21:30 : 25352] [warning] You level of the subsctiption doesn't allow you to use this feature
+[22:21:30 : 25352] [warning] You level of the subsctiption doesn't allow you to use this feature
+[22:21:30 : 25352] [warning] You level of the subsctiption doesn't allow you to use this feature
+[22:21:30 : 25352] [warning] You level of the subsctiption doesn't allow you to use this feature
+[22:21:30 : 25352] [warning] You level of the subsctiption doesn't allow you to use this feature
+[22:25:33 : 14068] [info] Proxy Video Servic has been created
+[22:25:33 : 14068] [warning] You level of the subsctiption doesn't allow you to use this feature
+[22:25:33 : 14068] [warning] You level of the subsctiption doesn't allow you to use this feature
+[22:25:33 : 14068] [warning] You level of the subsctiption doesn't allow you to use this feature
+[22:25:33 : 14068] [warning] You level of the subsctiption doesn't allow you to use this feature
+[22:25:33 : 14068] [warning] You level of the subsctiption doesn't allow you to use this feature
+[22:25:33 : 14068] [warning] You level of the subsctiption doesn't allow you to use this feature
+[22:25:33 : 14068] [warning] You level of the subsctiption doesn't allow you to use this feature
+[22:25:33 : 14068] [warning] You level of the subsctiption doesn't allow you to use this feature
+[22:25:33 : 14068] [warning] You level of the subsctiption doesn't allow you to use this feature
+[22:28:03 : 21804] [info] Proxy Video Servic has been created
+[22:28:03 : 21804] [warning] You level of the subsctiption doesn't allow you to use this feature
+[22:28:03 : 21804] [warning] You level of the subsctiption doesn't allow you to use this feature
+[22:28:03 : 21804] [warning] You level of the subsctiption doesn't allow you to use this feature
+[22:28:03 : 21804] [warning] You level of the subsctiption doesn't allow you to use this feature
+[22:28:03 : 21804] [warning] You level of the subsctiption doesn't allow you to use this feature
+[22:28:03 : 21804] [warning] You level of the subsctiption doesn't allow you to use this feature
+[22:28:03 : 21804] [warning] You level of the subsctiption doesn't allow you to use this feature
+[22:28:03 : 21804] [warning] You level of the subsctiption doesn't allow you to use this feature
+[22:28:03 : 21804] [warning] You level of the subsctiption doesn't allow you to use this feature
+[22:28:51 : 18580] [info] Proxy Video Servic has been created
+[22:28:51 : 18580] [warning] You level of the subsctiption doesn't allow you to use this feature
+[22:28:51 : 18580] [warning] You level of the subsctiption doesn't allow you to use this feature
+[22:28:51 : 18580] [info] The Url which is in the cache was used
+[22:28:51 : 18580] [info] Old element was deleted to place new one
+[22:29:38 : 11484] [info] Proxy Video Servic has been created
+[22:29:38 : 11484] [warning] You level of the subsctiption doesn't allow you to use this feature
+[22:29:38 : 11484] [warning] You level of the subsctiption doesn't allow you to use this feature
+[22:29:38 : 11484] [warning] You level of the subsctiption doesn't allow you to use this feature
+[22:29:38 : 11484] [warning] You level of the subsctiption doesn't allow you to use this feature
+[22:29:38 : 11484] [warning] You level of the subsctiption doesn't allow you to use this feature
+[22:29:38 : 11484] [warning] You level of the subsctiption doesn't allow you to use this feature
+[22:29:38 : 11484] [warning] You level of the subsctiption doesn't allow you to use this feature
+[22:30:20 : 21956] [info] Proxy Video Servic has been created
+[22:30:20 : 21956] [warning] You level of the subsctiption doesn't allow you to use this feature
+[22:30:20 : 21956] [warning] You level of the subsctiption doesn't allow you to use this feature
+[22:30:20 : 21956] [warning] You level of the subsctiption doesn't allow you to use this feature
+[22:30:20 : 21956] [warning] You level of the subsctiption doesn't allow you to use this feature
+[22:30:20 : 21956] [warning] You level of the subsctiption doesn't allow you to use this feature
+[22:30:20 : 21956] [warning] You level of the subsctiption doesn't allow you to use this feature
+[22:30:20 : 21956] [warning] You level of the subsctiption doesn't allow you to use this feature
+[22:30:20 : 21956] [warning] You level of the subsctiption doesn't allow you to use this feature
+[22:30:20 : 21956] [warning] You level of the subsctiption doesn't allow you to use this feature
+[22:30:44 : 20172] [info] Proxy Video Servic has been created
+[22:30:44 : 20172] [info] Old element was deleted to place new one
+[22:30:44 : 20172] [info] Old element was deleted to place new one
+[22:30:44 : 20172] [info] Old element was deleted to place new one
+[22:30:44 : 20172] [info] Old element was deleted to place new one
+[10:10:40 : 24572] [info] Proxy Video Servic has been created
+[10:10:40 : 24572] [info] Old element was deleted to place new one
+[10:10:40 : 24572] [info] Old element was deleted to place new one
+[10:10:40 : 24572] [info] Old element was deleted to place new one
+[10:10:40 : 24572] [info] Old element was deleted to place new one
