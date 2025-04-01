@@ -135,22 +135,25 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 #                            ${CMAKE_CURRENT_SOURCE_DIR}/include/FlyWeightPattern
 #                            )
 
-find_package(spdlog CONFIG REQUIRED)
+#find_package(spdlog CONFIG REQUIRED)
 
-add_library(ProxyPattern STATIC
-                src/ProxyPattern/RealVideoService.cpp
-                src/ProxyPattern/ProxyVideoService.cpp
-                src/ProxyPattern/User.cpp
-                )
+#add_library(ProxyPattern STATIC
+#                src/ProxyPattern/RealVideoService.cpp
+#                src/ProxyPattern/ProxyVideoService.cpp
+#                src/ProxyPattern/User.cpp
+#                )
 
-target_include_directories(ProxyPattern
-                            PUBLIC
-                            ${CMAKE_CURRENT_SOURCE_DIR}/include/ProxyPattern
-                            )
+#target_include_directories(ProxyPattern
+#                            PUBLIC
+#                            ${CMAKE_CURRENT_SOURCE_DIR}/include/ProxyPattern
+#                            )
+#target_link_libraries(ProxyPattern PUBLIC spdlog::spdlog)
 
+
+add_library(ChainOfResponsibility INTERFACE)
+target_include_directories(ChainOfResponsibility INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/include/ChainOfResponsibility)
 add_executable(${CMAKE_PROJECT_NAME} src/main.cpp)
 
-target_link_libraries(ProxyPattern PUBLIC spdlog::spdlog)
 
-target_link_libraries(${CMAKE_PROJECT_NAME} PUBLIC ProxyPattern)  # AdapterPattern/AbstractFactory/BuilderPattern/FactoryMethod/PrototypePattern/SingletonPattern/BridgePattern/CompositePattern/DecoratorPattern/FacadePattern/FlyWeightPattern
+target_link_libraries(${CMAKE_PROJECT_NAME} PUBLIC ChainOfResponsibility)  # AdapterPattern/AbstractFactory/BuilderPattern/FactoryMethod/PrototypePattern/SingletonPattern/BridgePattern/CompositePattern/DecoratorPattern/FacadePattern/FlyWeightPattern/ProxyPattern
 
