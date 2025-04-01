@@ -149,11 +149,19 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 #                            )
 #target_link_libraries(ProxyPattern PUBLIC spdlog::spdlog)
 
+#ChainOfResponsibility
+#add_library(ChainOfResponsibility INTERFACE)
+#target_include_directories(ChainOfResponsibility INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/include/ChainOfResponsibility)
 
-add_library(ChainOfResponsibility INTERFACE)
-target_include_directories(ChainOfResponsibility INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/include/ChainOfResponsibility)
+#CommandPattern
+add_library(CommandPattern INTERFACE)
+target_include_directories(CommandPattern INTERFACE 
+                        ${CMAKE_CURRENT_SOURCE_DIR}/include/CommandPattern
+                        ${CMAKE_CURRENT_SOURCE_DIR}/include/CommandPattern/Receivers
+                        ${CMAKE_CURRENT_SOURCE_DIR}/include/CommandPattern/Commands
+                       )
+
 add_executable(${CMAKE_PROJECT_NAME} src/main.cpp)
 
-
-target_link_libraries(${CMAKE_PROJECT_NAME} PUBLIC ChainOfResponsibility)  # AdapterPattern/AbstractFactory/BuilderPattern/FactoryMethod/PrototypePattern/SingletonPattern/BridgePattern/CompositePattern/DecoratorPattern/FacadePattern/FlyWeightPattern/ProxyPattern
+target_link_libraries(${CMAKE_PROJECT_NAME} PUBLIC CommandPattern)  # AdapterPattern/AbstractFactory/BuilderPattern/FactoryMethod/PrototypePattern/SingletonPattern/BridgePattern/CompositePattern/DecoratorPattern/FacadePattern/FlyWeightPattern/ProxyPattern/ChainOfResponsibility/CommandPattern
 
