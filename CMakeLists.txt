@@ -154,14 +154,23 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 #target_include_directories(ChainOfResponsibility INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/include/ChainOfResponsibility)
 
 #CommandPattern
-add_library(CommandPattern INTERFACE)
-target_include_directories(CommandPattern INTERFACE 
-                        ${CMAKE_CURRENT_SOURCE_DIR}/include/CommandPattern
-                        ${CMAKE_CURRENT_SOURCE_DIR}/include/CommandPattern/Receivers
-                        ${CMAKE_CURRENT_SOURCE_DIR}/include/CommandPattern/Commands
-                       )
+#add_library(CommandPattern INTERFACE)
+#target_include_directories(CommandPattern INTERFACE 
+#                        ${CMAKE_CURRENT_SOURCE_DIR}/include/CommandPattern
+#                        ${CMAKE_CURRENT_SOURCE_DIR}/include/CommandPattern/Receivers
+#                        ${CMAKE_CURRENT_SOURCE_DIR}/include/CommandPattern/Commands
+#                       )
+
+
+add_library(IteratorPattern INTERFACE)
+target_include_directories(IteratorPattern INTERFACE
+                    ${CMAKE_CURRENT_SOURCE_DIR}/include/IteratorPattern
+                    ${CMAKE_CURRENT_SOURCE_DIR}/include/IteratorPattern/Iterator
+                    ${CMAKE_CURRENT_SOURCE_DIR}/include/IteratorPattern/Collections
+                    )
 
 add_executable(${CMAKE_PROJECT_NAME} src/main.cpp)
 
-target_link_libraries(${CMAKE_PROJECT_NAME} PUBLIC CommandPattern)  # AdapterPattern/AbstractFactory/BuilderPattern/FactoryMethod/PrototypePattern/SingletonPattern/BridgePattern/CompositePattern/DecoratorPattern/FacadePattern/FlyWeightPattern/ProxyPattern/ChainOfResponsibility/CommandPattern
+target_link_libraries(${CMAKE_PROJECT_NAME} PUBLIC IteratorPattern)  
+# AdapterPattern/AbstractFactory/BuilderPattern/FactoryMethod/PrototypePattern/SingletonPattern/BridgePattern/CompositePattern/DecoratorPattern/FacadePattern/FlyWeightPattern/ProxyPattern/ChainOfResponsibility/CommandPattern/CommandPattern
 
