@@ -18,8 +18,8 @@ Here are some of the design patterns included in this repository:
 
 - **Creational Patterns:**
 
-  - [Singleton](./include/Singleton/)
-  - [Factory Method](./include/FactoryMethod/)
+  - [Singleton](include/Singleton/)
+  - [Factory Method](/include/FactoryMethod/)
   - [Abstract Factory](./include/AbstractFactory/)
   - [Builder](./include/Builder/)
   - [Prototype](./include/Prototype/)
