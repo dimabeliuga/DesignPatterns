@@ -18,25 +18,25 @@ Here are some of the design patterns included in this repository:
 
 - **Creational Patterns:**
 
-  - [Singleton](include/Singleton/)
+  - [Singleton](/include/Singleton/)
   - [Factory Method](/include/FactoryMethod/)
-  - [Abstract Factory](./include/AbstractFactory/)
-  - [Builder](./include/Builder/)
-  - [Prototype](./include/Prototype/)
+  - [Abstract Factory](/include/AbstractFactory/)
+  - [Builder](/include/Builder/)
+  - [Prototype](/include/Prototype/)
 
 - **Structural Patterns:**
-  - [Adapter](./include/Adapter/)
-  - [Bridge](./include/Bridge/)
-  - [Decorator](./include/Decorator/)
-  - [Facade](./include/Facade/)
-  - [Composite](./include/Composite/)
-  - [Flyweight](./include/Flyweight/)
-  - [Proxy](./include/Proxy/)
+  - [Adapter](/include/Adapter/)
+  - [Bridge](/include/Bridge/)
+  - [Decorator](/include/Decorator/)
+  - [Facade](/include/Facade/)
+  - [Composite](/include/Composite/)
+  - [Flyweight](/include/Flyweight/)
+  - [Proxy](/include/Proxy/)
 
 - **Behavioral Patterns:**
-  - [Chain of Responsibility](./include/ChainOfResponsibility/)
-  - [Command](./include/Command/)
-  - [Iterator](./include/Iterator/)
+  - [Chain of Responsibility](/include/ChainOfResponsibility/)
+  - [Command](/include/Command/)
+  - [Iterator](/include/Iterator/)
 
 ## How to Use
 
