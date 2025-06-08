@@ -17,25 +17,26 @@ The repository is organized by design patterns. Each folder is named after a spe
 Here are some of the design patterns included in this repository:
 
 - **Creational Patterns:**
-  - Singleton
-  - Factory Method
-  - Abstract Factory
-  - Builder
-  - Prototype
+
+  - [Singleton](./include/Singleton/)
+  - [Factory Method](./include/FactoryMethod/)
+  - [Abstract Factory](./include/AbstractFactory/)
+  - [Builder](./include/Builder/)
+  - [Prototype](./include/Prototype/)
 
 - **Structural Patterns:**
-  - Adapter
-  - Bridge
-  - Decorator
-  - Facade
-  - Composite
-  - Flyweight
-  - Proxy
+  - [Adapter](./include/Adapter/)
+  - [Bridge](./include/Bridge/)
+  - [Decorator](./include/Decorator/)
+  - [Facade](./include/Facade/)
+  - [Composite](./include/Composite/)
+  - [Flyweight](./include/Flyweight/)
+  - [Proxy](./include/Proxy/)
 
 - **Behavioral Patterns:**
-  - Chain of Responsibility
-  - Command
-  - Iterator
+  - [Chain of Responsibility](./include/ChainOfResponsibility/)
+  - [Command](./include/Command/)
+  - [Iterator](./include/Iterator/)
 
 ## How to Use
 
