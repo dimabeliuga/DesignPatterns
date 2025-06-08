@@ -14,7 +14,7 @@ class LevelOrderTreeIterator : public Iterator<T> {
     private:
         std::queue<Node<T>*> q;
     public:
-        LevelOrderTreeIterator(const ptrNode<T>& root)
+        explicit LevelOrderTreeIterator(const ptrNode<T>& root)
         {
             q.push(root.get());
         }
@@ -45,7 +45,7 @@ class PreOrderTreeIterator : public Iterator<T>{
     private:
         std::stack<Node<T>*> stack;
     public:
-        PreOrderTreeIterator(const ptrNode<T>& root)
+        explicit PreOrderTreeIterator(const ptrNode<T>& root)
         {
             stack.push(root.get());
         }
@@ -82,7 +82,7 @@ class InOrderTreeIterator : public Iterator<T> {
             }
         }
     public:
-        InOrderTreeIterator(const ptrNode<T>& root)
+        explicit InOrderTreeIterator(const ptrNode<T>& root)
         {
             pushLeftSideOfTheTree(root.get());
         }
